@@ -13,11 +13,12 @@ struct TopUIView: View {
             Button(action:{self.isPresented=true}){
                 Image(systemName: "chevron.left")
                 Text("Back")
+                Spacer()
             }
             .fullScreenCover(isPresented: $isPresented, content: {CategoryView()})
             
             
-        }
+        }.padding(1)
     }
 }
 

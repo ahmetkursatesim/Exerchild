@@ -16,16 +16,22 @@ struct CategoryView: View {
         
             ZStack{
                 VStack(alignment:.center){
-                    Button(action:{self.isPresentedN=true}){
-                        Text("Numeric")
+                    
+                    HStack{
+                        
+                        Button(action:{self.isPresentedN=true}){
+                          Image("numbers")
+                        }
+                        .fullScreenCover(isPresented: $isPresentedN, content: {NumericUIView()})
+                        Button(action:{self.isPresentedV=true}){
+                            Image("numbers")
+                        }
+                        .fullScreenCover(isPresented: $isPresentedV, content: {VisualUIView()})
+                        
                     }
-                    .fullScreenCover(isPresented: $isPresentedN, content: {NumericUIView()})
-                    Button(action:{self.isPresentedV=true}){
-                        Text("Visual")
-                    }
-                    .fullScreenCover(isPresented: $isPresentedV, content: {VisualUIView()})
+                    
                     Button(action:{self.isPresentedC=true}){
-                        Text("Crossword")
+                        Image("numbers")
                     }
                     .fullScreenCover(isPresented: $isPresentedC, content: {CrosswordUIView()})
                 }

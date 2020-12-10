@@ -11,14 +11,28 @@ struct Main: View {
     @State private var isPresented=false
     var body: some View {
         
+            
             ZStack{
-                VStack(alignment:.center){
-                    Button(action:{self.isPresented=true}){
-                        Text("Play")
+                    VStack(alignment:.center){
+                        HStack{
+                            
+                            Button(action:{self.isPresented=true}){
+                                Image("play")
+                            }
+                            .fullScreenCover(isPresented: $isPresented, content: {CategoryView()})
+                            Button(action:{self.isPresented=true}){
+                                Image("jackpot")
+                            }
+                            .fullScreenCover(isPresented: $isPresented, content: {CategoryView()})
+                            
+                        }
+                       
+                        
+                        
                     }
-                    .fullScreenCover(isPresented: $isPresented, content: {CategoryView()})
-                }
+                
             }
+        
             .frame(minWidth: 0, maxWidth: .infinity, minHeight:0,maxHeight: .infinity,alignment: .center)
             .background(Image("background")
                             .resizable()
