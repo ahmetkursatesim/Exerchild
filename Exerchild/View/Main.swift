@@ -8,8 +8,36 @@
 import SwiftUI
 
 struct Main: View {
+    @State private var isPresented=false
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+            ZStack{
+                VStack(alignment:.center){
+                    Button(action:{self.isPresented=true}){
+                        Text("Play")
+                    }
+                    .fullScreenCover(isPresented: $isPresented, content: {CategoryView()})
+                }
+            }
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight:0,maxHeight: .infinity,alignment: .center)
+            .background(Image("background")
+                            .resizable()
+                            .scaledToFill()
+                            .edgesIgnoringSafeArea(.all)
+                            )
+           
+    }
+            
+            
+        
+       
+}
+
+struct topMain: View {
+    var body: some View {
+        VStack{
+            Spacer()
+        }
     }
 }
 

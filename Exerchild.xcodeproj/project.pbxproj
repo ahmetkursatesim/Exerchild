@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E345742B2582500100694B4C /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E345742A2582500100694B4C /* CategoryView.swift */; };
+		E34574412582541800694B4C /* NumericUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34574402582541800694B4C /* NumericUIView.swift */; };
+		E34574492582543000694B4C /* CrosswordUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34574482582543000694B4C /* CrosswordUIView.swift */; };
+		E345744E2582544400694B4C /* VisualUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E345744D2582544400694B4C /* VisualUIView.swift */; };
+		E345745B2582553F00694B4C /* GeneralUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E345745A2582553F00694B4C /* GeneralUIView.swift */; };
 		E36CC2092582374B001EB273 /* ExerchildApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36CC2082582374B001EB273 /* ExerchildApp.swift */; };
 		E36CC20B2582374B001EB273 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36CC20A2582374B001EB273 /* ContentView.swift */; };
 		E36CC20D2582374E001EB273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E36CC20C2582374E001EB273 /* Assets.xcassets */; };
@@ -36,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E345742A2582500100694B4C /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		E34574402582541800694B4C /* NumericUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericUIView.swift; sourceTree = "<group>"; };
+		E34574482582543000694B4C /* CrosswordUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrosswordUIView.swift; sourceTree = "<group>"; };
+		E345744D2582544400694B4C /* VisualUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualUIView.swift; sourceTree = "<group>"; };
+		E345745A2582553F00694B4C /* GeneralUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralUIView.swift; sourceTree = "<group>"; };
 		E36CC2052582374B001EB273 /* Exerchild.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exerchild.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E36CC2082582374B001EB273 /* ExerchildApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerchildApp.swift; sourceTree = "<group>"; };
 		E36CC20A2582374B001EB273 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -152,6 +162,11 @@
 			isa = PBXGroup;
 			children = (
 				E3BD191B25823BE300F5D7F0 /* Main.swift */,
+				E345742A2582500100694B4C /* CategoryView.swift */,
+				E34574402582541800694B4C /* NumericUIView.swift */,
+				E34574482582543000694B4C /* CrosswordUIView.swift */,
+				E345744D2582544400694B4C /* VisualUIView.swift */,
+				E345745A2582553F00694B4C /* GeneralUIView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -292,11 +307,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E345744E2582544400694B4C /* VisualUIView.swift in Sources */,
 				E3BD191C25823BE300F5D7F0 /* Main.swift in Sources */,
 				E36CC2122582374E001EB273 /* Persistence.swift in Sources */,
+				E345745B2582553F00694B4C /* GeneralUIView.swift in Sources */,
+				E34574412582541800694B4C /* NumericUIView.swift in Sources */,
+				E345742B2582500100694B4C /* CategoryView.swift in Sources */,
 				E36CC20B2582374B001EB273 /* ContentView.swift in Sources */,
 				E36CC2152582374E001EB273 /* Exerchild.xcdatamodeld in Sources */,
 				E36CC2092582374B001EB273 /* ExerchildApp.swift in Sources */,
+				E34574492582543000694B4C /* CrosswordUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
