@@ -14,34 +14,34 @@ struct CategoryView: View {
     
     var body: some View {
         
-            ZStack{
-                VStack(alignment:.center){
+        ZStack{
+            VStack(alignment:.center){
+                
+                HStack{
                     
-                    HStack{
-                        
-                        Button(action:{self.isPresentedN=true}){
-                          Image("numbers")
-                        }
-                        .fullScreenCover(isPresented: $isPresentedN, content: {NumericUIView()})
-                        Button(action:{self.isPresentedV=true}){
-                            Image("numbers")
-                        }
-                        .fullScreenCover(isPresented: $isPresentedV, content: {VisualUIView()})
-                        
-                    }
-                    
-                    Button(action:{self.isPresentedC=true}){
+                    Button(action:{self.isPresentedN=true}){
                         Image("numbers")
                     }
-                    .fullScreenCover(isPresented: $isPresentedC, content: {CrosswordUIView()})
+                    .fullScreenCover(isPresented: $isPresentedN, content: {NumericUIView()})
+                    Button(action:{self.isPresentedV=true}){
+                        Image("numbers")
+                    }
+                    .fullScreenCover(isPresented: $isPresentedV, content: {VisualUIView()})
+                    
                 }
+                
+                Button(action:{self.isPresentedC=true}){
+                    Image("numbers")
+                }
+                .fullScreenCover(isPresented: $isPresentedC, content: {CrosswordUIView()})
             }
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight:0,maxHeight: .infinity,alignment: .center)
-            .background(Image("background")
-                            .resizable()
-                            .scaledToFill()
-                            .edgesIgnoringSafeArea(.all)
-                            )
+        }
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight:0,maxHeight: .infinity,alignment: .center)
+        .background(Image("background")
+                        .resizable()
+                        .scaledToFill()
+                        .edgesIgnoringSafeArea(.all)
+        )
     }
 }
 

@@ -10,41 +10,28 @@ import SwiftUI
 struct Main: View {
     @State private var isPresented=false
     var body: some View {
-        
-            
-            ZStack{
-                    VStack(alignment:.center){
-                        HStack{
-                            
-                            Button(action:{self.isPresented=true}){
-                                Image("play")
-                            }
-                            .fullScreenCover(isPresented: $isPresented, content: {CategoryView()})
-                            Button(action:{self.isPresented=true}){
-                                Image("jackpot")
-                            }
-                            .fullScreenCover(isPresented: $isPresented, content: {CategoryView()})
-                            
-                        }
-                       
-                        
-                        
+        ZStack{
+            VStack(alignment:.center){
+                HStack{
+                    Button(action:{self.isPresented=true}){
+                        Image("play")
                     }
-                
+                    .fullScreenCover(isPresented: $isPresented, content: {CategoryView()})
+                    Button(action:{self.isPresented=true}){
+                        Image("jackpot")
+                    }
+                    .fullScreenCover(isPresented: $isPresented, content: {CategoryView()})
+                }
             }
-        
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight:0,maxHeight: .infinity,alignment: .center)
-            .background(Image("background")
-                            .resizable()
-                            .scaledToFill()
-                            .edgesIgnoringSafeArea(.all)
-                            )
-           
+            
+        }
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight:0,maxHeight: .infinity,alignment: .center)
+        .background(Image("background")
+                        .resizable()
+                        .scaledToFill()
+                        .edgesIgnoringSafeArea(.all)
+        )
     }
-            
-            
-        
-       
 }
 
 struct topMain: View {
