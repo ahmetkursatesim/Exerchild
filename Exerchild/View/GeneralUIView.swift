@@ -11,7 +11,7 @@ struct TopUIView: View {
     var body: some View {
         HStack{
             Button(action:{self.isPresented=true}){
-             
+                Image(systemName: "chevron.left")
                 Text("Back")
             }
             .fullScreenCover(isPresented: $isPresented, content: {CategoryView()})
