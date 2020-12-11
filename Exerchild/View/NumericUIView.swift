@@ -12,20 +12,12 @@ struct NumericUIView: View {
     @State var questionArray=[QuestionStringModel]()
     @State var shuffledQuestionNumber=[Int]()
     @State var questionText=""
+    @State var currentQnumber=0
     @State var option1=""
     @State var option2=""
     @State var option3=""
     var body: some View {
-        
-        let list=datamanager.fetchNumericQuestion(){element in
-            self.questionArray=element
-            let infoArray=datamanager.shuffledList(questionArray: self.questionArray)
-            self.questionText=infoArray[0]
-            self.option1=infoArray[1]
-            self.option2=infoArray[2]
-            self.option3=infoArray[3]
-        }
-        
+     
         ZStack{
             VStack{
                 TopUIView()
@@ -40,6 +32,19 @@ struct NumericUIView: View {
                             .background(Color.white)
                             .cornerRadius(25)
                         Button(action:{
+                            if(self.questionArray.count>0){
+                                
+                                self.questionArray.remove(at:self.currentQnumber)
+                                let infoArray=datamanager.shuffledList(questionArray:self.questionArray)
+                                self.currentQnumber=Int(infoArray[0])!
+                                self.questionText=infoArray[1]
+                                self.option1=infoArray[2]
+                                self.option2=infoArray[3]
+                                self.option3=infoArray[4]
+                            }
+                           
+                          
+                            
                             
                             
                         }){
@@ -53,7 +58,16 @@ struct NumericUIView: View {
                         .background(Color.white)
                         .cornerRadius(25)
                         Button(action:{
-                            
+                            if(self.questionArray.count>0){
+                                
+                                self.questionArray.remove(at:self.currentQnumber)
+                                let infoArray=datamanager.shuffledList(questionArray:self.questionArray)
+                                self.currentQnumber=Int(infoArray[0])!
+                                self.questionText=infoArray[1]
+                                self.option1=infoArray[2]
+                                self.option2=infoArray[3]
+                                self.option3=infoArray[4]
+                            }
                             
                         }){
                             HStack{
@@ -67,7 +81,16 @@ struct NumericUIView: View {
                         .background(Color.white)
                         .cornerRadius(25)
                         Button(action:{
-                            
+                            if(self.questionArray.count>0){
+                                
+                                self.questionArray.remove(at:self.currentQnumber)
+                                let infoArray=datamanager.shuffledList(questionArray:self.questionArray)
+                                self.currentQnumber=Int(infoArray[0])!
+                                self.questionText=infoArray[1]
+                                self.option1=infoArray[2]
+                                self.option2=infoArray[3]
+                                self.option3=infoArray[4]
+                            }
                             
                         }){
                             HStack{
@@ -92,6 +115,19 @@ struct NumericUIView: View {
                         .scaledToFill()
                         .edgesIgnoringSafeArea(.all)
         )
+        .onAppear(perform: {
+            
+            datamanager.fetchNumericQuestion(){element in
+                
+                self.questionArray=element
+                let infoArray=datamanager.shuffledList(questionArray: element)
+                self.currentQnumber=Int(infoArray[0])!
+                self.questionText=infoArray[1]
+                self.option1=infoArray[2]
+                self.option2=infoArray[3]
+                self.option3=infoArray[4]
+            }
+        })
     }
 }
 

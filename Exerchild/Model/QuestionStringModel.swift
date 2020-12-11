@@ -8,7 +8,7 @@
 
 
 struct QuestionStringModel {
-    let questionNumber:String
+    let questionNumber:Int
     let questionText:String
     let correctAnswer:String
     let wrongAnswer1:String
