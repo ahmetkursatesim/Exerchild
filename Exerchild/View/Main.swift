@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Main: View {
     @State private var isPresented=false
-    @ObservedObject var datamanager = DataManagerViewModel()
+    
     var body: some View {
         ZStack{
             VStack(alignment:.center){

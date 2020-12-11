@@ -8,7 +8,24 @@
 import SwiftUI
 
 struct NumericUIView: View {
+    @ObservedObject var datamanager = DataManagerViewModel()
+    @State var questionArray=[QuestionStringModel]()
+    @State var shuffledQuestionNumber=[Int]()
+    @State var questionText=""
+    @State var option1=""
+    @State var option2=""
+    @State var option3=""
     var body: some View {
+        
+        let list=datamanager.fetchNumericQuestion(){element in
+            self.questionArray=element
+            let infoArray=datamanager.shuffledList(questionArray: self.questionArray)
+            self.questionText=infoArray[0]
+            self.option1=infoArray[1]
+            self.option2=infoArray[2]
+            self.option3=infoArray[3]
+        }
+        
         ZStack{
             VStack{
                 TopUIView()
@@ -17,7 +34,7 @@ struct NumericUIView: View {
                         HStack{
                             Spacer()
                         }
-                        Text("Question")
+                        Text(self.questionText)
                             .frame(width:geometry.size.width*90/100,height: geometry.size.height*30/100)
                             .padding(geometry.size.width*2/100)
                             .background(Color.white)
@@ -28,7 +45,7 @@ struct NumericUIView: View {
                         }){
                             HStack{
                                 Text("A:")
-                                Text("Option 1")
+                                Text(self.option1)
                             }
                             
                         }.frame(width:geometry.size.width*90/100,height: geometry.size.height*10/100)
@@ -41,7 +58,7 @@ struct NumericUIView: View {
                         }){
                             HStack{
                                 Text("B:")
-                                Text("Option 2")
+                                Text(self.option2)
                             }
                             
                         }
@@ -55,7 +72,7 @@ struct NumericUIView: View {
                         }){
                             HStack{
                                 Text("C:")
-                                Text("Option 3")
+                                Text(self.option3)
                             }
                             
                         }

@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct VisualUIView: View {
+    @ObservedObject var datamanager = DataManagerViewModel()
     var body: some View {
+       
         ZStack{
             VStack{
                 TopUIView()

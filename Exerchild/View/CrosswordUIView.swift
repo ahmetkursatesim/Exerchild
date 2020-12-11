@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CrosswordUIView: View {
+    @ObservedObject var datamanager = DataManagerViewModel()
     var body: some View {
         ZStack{
             TopUIView()

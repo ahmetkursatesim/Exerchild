@@ -5,7 +5,7 @@
 //  Created by Kursat on 10.12.2020.
 //
 
-import SwiftUI
+
 
 struct QuestionStringModel {
     let questionNumber:String
