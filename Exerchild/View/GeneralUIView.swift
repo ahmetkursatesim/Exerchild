@@ -11,11 +11,12 @@ struct TopUIView: View {
     var body: some View {
         HStack{
             Button(action:{self.isPresented=true}){
+                
                 Image(systemName: "chevron.left")
                 Text("Back")
                 Spacer()
             }
-            .fullScreenCover(isPresented: $isPresented, content: {CategoryView()})
+            .fullScreenCover(isPresented: $isPresented, content: {Main()})
             
             
         }.padding(1)

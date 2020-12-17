@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Main: View {
     @State private var isPresented=false
-    
+    @State private var isPresentedS=false
     var body: some View {
         ZStack{
             VStack(alignment:.center){
@@ -17,11 +17,12 @@ struct Main: View {
                     Button(action:{self.isPresented=true}){
                         Image("play")
                     }
-                    .fullScreenCover(isPresented: $isPresented, content: {CategoryView()})
-                    Button(action:{self.isPresented=true}){
+                    .fullScreenCover(isPresented: $isPresented, content: {NumericUIView()})
+                    Button(action:{self.isPresentedS=true}){
                         Image("jackpot")
-                    }
-                    .fullScreenCover(isPresented: $isPresented, content: {CategoryView()})
+                        
+                    }.fullScreenCover(isPresented: $isPresentedS, content: {ScoreUIView()})
+                   
                 }
             }
             
