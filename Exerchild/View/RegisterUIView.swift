@@ -15,7 +15,6 @@ struct RegisterUIView: View {
   
     @Environment(\.managedObjectContext) private var viewContext
     let fetchrequest=NSFetchRequest<NSFetchRequestResult>(entityName: "UserInfo")
-
     var body: some View {
         
         GeometryReader{geometry in
@@ -48,16 +47,6 @@ struct RegisterUIView: View {
                         .scaledToFill()
                         .edgesIgnoringSafeArea(.all))
         .fullScreenCover(isPresented: $isPresented, content: {Main()})
-        .onAppear(perform: {
-            let flag=datamanager.fetchUser(viewContext: viewContext,entityname: "UserInfo")
-            if(flag) {
-                self.isPresented=true
-            }
-            
-        })
-     
-
-       
         }
         
     }
@@ -68,7 +57,6 @@ struct RegisterUIView: View {
             if(email != ""){
                 let newItem = UserInfo(context: viewContext)
                 newItem.email = email
-
                 do {
                     
                     try viewContext.save()

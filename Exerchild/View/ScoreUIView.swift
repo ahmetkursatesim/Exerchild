@@ -15,10 +15,8 @@ struct ScoreUIView: View {
         VStack{
             HStack{
                 Button(action:{self.isPresented=true}){
-                    
                     Image(systemName: "chevron.left")
                     Text("Back")
-                    
                 }
                 .fullScreenCover(isPresented: $isPresented, content: {Main()})
                 Spacer()

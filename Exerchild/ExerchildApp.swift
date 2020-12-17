@@ -10,11 +10,19 @@ import Firebase
 @main
 struct ExerchildApp: App {
     let persistenceController = PersistenceController.shared
+    @ObservedObject var datamanager = CoreDataViewModel()
     @UIApplicationDelegateAdaptor(Appdelegate.self) var appDelegate
     var body: some Scene {
         WindowGroup {
+            let flag=datamanager.fetchUser(viewContext:persistenceController.container.viewContext,entityname: "UserInfo")
             
-            RegisterUIView().environment(\.managedObjectContext, persistenceController.container.viewContext)
+            if(flag){
+                Main()
+            }else{
+                RegisterUIView().environment(\.managedObjectContext, persistenceController.container.viewContext)
+             
+            }
+           
         }
     }
 }

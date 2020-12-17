@@ -27,6 +27,7 @@
 		E36CC2152582374E001EB273 /* Exerchild.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E36CC2132582374E001EB273 /* Exerchild.xcdatamodeld */; };
 		E36CC2202582374E001EB273 /* ExerchildTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36CC21F2582374E001EB273 /* ExerchildTests.swift */; };
 		E36CC22B2582374E001EB273 /* ExerchildUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36CC22A2582374E001EB273 /* ExerchildUITests.swift */; };
+		E395DFE0258BDC39000FE614 /* CoreDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E395DFDF258BDC39000FE614 /* CoreDataViewModel.swift */; };
 		E3BD191C25823BE300F5D7F0 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BD191B25823BE300F5D7F0 /* Main.swift */; };
 		E3BDBA0D258B764F00174129 /* ScoreUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BDBA0C258B764F00174129 /* ScoreUIView.swift */; };
 		E3BDBA12258B768000174129 /* ScoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BDBA11258B768000174129 /* ScoreModel.swift */; };
@@ -69,6 +70,7 @@
 		E36CC2262582374E001EB273 /* ExerchildUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExerchildUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E36CC22A2582374E001EB273 /* ExerchildUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerchildUITests.swift; sourceTree = "<group>"; };
 		E36CC22C2582374E001EB273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E395DFDF258BDC39000FE614 /* CoreDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewModel.swift; sourceTree = "<group>"; };
 		E3BD191B25823BE300F5D7F0 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		E3BDBA0C258B764F00174129 /* ScoreUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreUIView.swift; sourceTree = "<group>"; };
 		E3BDBA11258B768000174129 /* ScoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreModel.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				E34039082582859900B6974C /* DataManagerViewModel.swift */,
+				E395DFDF258BDC39000FE614 /* CoreDataViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3BDBA4B258B86F800174129 /* Persistence.swift in Sources */,
+				E395DFE0258BDC39000FE614 /* CoreDataViewModel.swift in Sources */,
 				E3BD191C25823BE300F5D7F0 /* Main.swift in Sources */,
 				E3BDBA12258B768000174129 /* ScoreModel.swift in Sources */,
 				E345745B2582553F00694B4C /* GeneralUIView.swift in Sources */,

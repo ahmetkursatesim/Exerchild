@@ -82,6 +82,7 @@ class DataManagerViewModel: ObservableObject {
             let fetchrequest=NSFetchRequest<NSFetchRequestResult>(entityName: entityname)
             let items=try viewContext.fetch(fetchrequest) as! [NSManagedObject]
             let userInfos=items as! [UserInfo]
+            print(userInfos[0].email)
             if(userInfos.count>0){
                 return true
             }
