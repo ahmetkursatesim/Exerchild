@@ -58,7 +58,7 @@ struct RegisterUIView: View {
                 let newItem = UserInfo(context: viewContext)
                 newItem.email = email
                 do {
-                    
+                    _=datamanager.remoteWriteUserInfo(email: email)
                     try viewContext.save()
                     self.isPresented=true
                 } catch {

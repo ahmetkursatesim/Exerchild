@@ -33,6 +33,7 @@
 		E3BDBA12258B768000174129 /* ScoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BDBA11258B768000174129 /* ScoreModel.swift */; };
 		E3BDBA17258B831000174129 /* RegisterUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BDBA16258B831000174129 /* RegisterUIView.swift */; };
 		E3BDBA4B258B86F800174129 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BDBA4A258B86F800174129 /* Persistence.swift */; };
+		E3EA0E99258CC1A300E259B0 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EA0E98258CC1A300E259B0 /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		E3BDBA11258B768000174129 /* ScoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreModel.swift; sourceTree = "<group>"; };
 		E3BDBA16258B831000174129 /* RegisterUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUIView.swift; sourceTree = "<group>"; };
 		E3BDBA4A258B86F800174129 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		E3EA0E98258CC1A300E259B0 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			children = (
 				E3403910258287E500B6974C /* QuestionStringModel.swift */,
 				E3BDBA11258B768000174129 /* ScoreModel.swift */,
+				E3EA0E98258CC1A300E259B0 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				E3BD191C25823BE300F5D7F0 /* Main.swift in Sources */,
 				E3BDBA12258B768000174129 /* ScoreModel.swift in Sources */,
 				E345745B2582553F00694B4C /* GeneralUIView.swift in Sources */,
+				E3EA0E99258CC1A300E259B0 /* UserModel.swift in Sources */,
 				E3403911258287E500B6974C /* QuestionStringModel.swift in Sources */,
 				E34574412582541800694B4C /* NumericUIView.swift in Sources */,
 				E34039092582859900B6974C /* DataManagerViewModel.swift in Sources */,

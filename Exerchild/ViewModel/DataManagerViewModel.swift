@@ -11,7 +11,6 @@ import CoreData
 class DataManagerViewModel: ObservableObject {
     
     var ref:DatabaseReference=Database.database().reference()
-    
     func fetchNumericQuestion(completion: @escaping (([QuestionStringModel]) -> Void)) {
         var QuestionList=[QuestionStringModel]()
         self.ref.child("matematik").observeSingleEvent(of: .value, with:{
@@ -82,7 +81,6 @@ class DataManagerViewModel: ObservableObject {
             let fetchrequest=NSFetchRequest<NSFetchRequestResult>(entityName: entityname)
             let items=try viewContext.fetch(fetchrequest) as! [NSManagedObject]
             let userInfos=items as! [UserInfo]
-            print(userInfos[0].email)
             if(userInfos.count>0){
                 return true
             }
@@ -95,5 +93,21 @@ class DataManagerViewModel: ObservableObject {
         
         
     }
+    
+    func remoteWriteUserInfo(email:String)->Bool{
+        do {
+            let refChild = self.ref.child("Users")
+            let runId=email.split(separator:"@")
+            
+            let newref=refChild.child(runId[0]+"gmailcom")
+            newref.setValue(email)
+            return true
+        }
+        catch{
+            return false
+        }
+        
+    }
+    
 }
 
